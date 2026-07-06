@@ -47,6 +47,7 @@ IBetU/
 │   ├── PROJECT_PLAN.md          # Phased roadmap, milestones, deliverables
 │   ├── AGENT_WORKERS.md         # Role definitions, collaboration protocol
 │   ├── SYSTEM_ARCHITECTURE.md   # Components, data flows, contract outlines, diagrams
+├── CLAUDE_REVIEW_PROMPT.md  # Ready-to-paste prompt for Claude (uses GitHub connector)
 ├── contracts/                 # (Future) Solidity source, tests, scripts
 ├── frontend/                  # (Future) Next.js dApp
 └── ...
@@ -80,6 +81,22 @@ We use a structured multi-agent development model (detailed in AGENT_WORKERS.md)
 - Tests and docs are first-class.
 
 PRs welcome once core is stable. Good first issues will be labeled.
+
+## AI Agent Collaboration & Claude Review Prompt
+
+A complete, ready-to-copy prompt specifically written for Claude (Fable or equivalent with GitHub connector enabled) is available here:
+
+**`docs/CLAUDE_REVIEW_PROMPT.md`**
+
+This prompt includes:
+- The exact project name (**IBetU**) and repository path (**dirac1974/IBetU**)
+- Explicit instructions for Claude to use the **GitHub connector** for all exploration, file reads, branch creation, pushes, PRs, and issues
+- Step-by-step guidance to first explore via connector, then read core docs (especially PROJECT_MEMORY.md)
+- Structured review focus areas (vision, incentives/resolution design, plan, agent model, architecture, legal)
+- Requirements to provide ratings, concrete suggestions, quoted text edits, and prioritized next actions
+- Collaboration protocol aligned with the AGENT_WORKERS.md model
+
+Use this prompt when asking Claude for the initial comprehensive review and iteration ideas. After Claude responds, we can turn feedback into GitHub issues or PRs that update the planning docs.
 
 ## Roadmap Snapshot
 
